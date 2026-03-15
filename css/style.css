@@ -653,18 +653,121 @@ select {
   color: #7a4652;
 }
 
+.letter-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.letter-tab {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  padding: 16px 18px;
+  border: 1px solid rgba(200, 76, 103, 0.14);
+  border-radius: 22px;
+  color: #7d4754;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 249, 246, 0.68));
+  box-shadow: 0 14px 28px rgba(102, 37, 54, 0.06);
+}
+
+.letter-tab::after {
+  content: "";
+  position: absolute;
+  inset: auto 18px 0;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(200, 76, 103, 0.12), rgba(200, 76, 103, 0.42));
+  opacity: 0;
+  transform: scaleX(0.72);
+  transform-origin: center;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.letter-tab:hover {
+  transform: translateY(-1px);
+}
+
+.letter-tab.is-active {
+  color: var(--accent-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 247, 245, 0.9));
+  box-shadow:
+    0 18px 32px rgba(102, 37, 54, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.66);
+}
+
+.letter-tab.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.letter-tab-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--accent);
+}
+
+.letter-tab-title {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.letter-tab-note {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: rgba(167, 51, 81, 0.84);
+}
+
+.letter-tab-blessing {
+  border-color: rgba(200, 76, 103, 0.22);
+  background: linear-gradient(180deg, rgba(255, 252, 253, 0.88), rgba(255, 243, 246, 0.8));
+  box-shadow:
+    0 16px 30px rgba(118, 42, 63, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58);
+}
+
+.letter-tab-blessing .letter-tab-title {
+  font-weight: 800;
+  color: var(--accent-strong);
+  letter-spacing: 0.01em;
+}
+
+.letter-tab-blessing .letter-tab-note {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(200, 76, 103, 0.14);
+}
+
+.letter-tab-blessing.is-active .letter-tab-note {
+  color: rgba(255, 248, 250, 0.92);
+  background: linear-gradient(135deg, rgba(200, 76, 103, 0.92), rgba(167, 51, 81, 0.9));
+  border-color: transparent;
+}
+
 .letter-sections {
   display: grid;
   gap: 18px;
-  margin-top: 26px;
+  margin-top: 18px;
 }
 
 .letter-sheet {
   position: relative;
   overflow: hidden;
-  padding: 24px 24px 18px;
+  padding: 26px 26px 20px;
   border-radius: 26px;
   border: 1px solid rgba(200, 76, 103, 0.14);
+  box-shadow: 0 18px 32px rgba(105, 38, 56, 0.08);
 }
 
 .letter-sheet::before {
@@ -690,7 +793,7 @@ select {
 .letter-sheet-header {
   display: grid;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .letter-sheet-kicker {
@@ -720,7 +823,7 @@ select {
 }
 
 .letter-sheet p {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   line-height: 1.96;
   color: #633743;
 }
@@ -891,7 +994,7 @@ body.site-secret-awakened .secret-submit {
 .secret-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(46, 18, 28, 0.72);
+  background: rgba(46, 18, 28, 0.6);
   backdrop-filter: blur(10px);
 }
 
@@ -1117,8 +1220,9 @@ body.site-secret-awakened .secret-submit {
   align-content: center;
   justify-items: center;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 30%),
-    linear-gradient(180deg, rgba(42, 17, 33, 0.96), rgba(24, 9, 18, 0.98));
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.24), transparent 34%),
+    radial-gradient(circle at 18% 22%, rgba(255, 209, 225, 0.24), transparent 28%),
+    linear-gradient(180deg, rgba(82, 36, 58, 0.94), rgba(45, 18, 34, 0.96));
   color: #fff7fa;
   box-shadow: 0 28px 56px rgba(15, 4, 10, 0.44);
 }
@@ -1137,7 +1241,7 @@ body.site-secret-awakened .secret-submit {
   left: 8%;
   width: 160px;
   height: 160px;
-  background: rgba(255, 177, 206, 0.2);
+  background: rgba(255, 205, 223, 0.28);
 }
 
 .final-secret-stage::after {
@@ -1145,7 +1249,7 @@ body.site-secret-awakened .secret-submit {
   bottom: 60px;
   width: 220px;
   height: 220px;
-  background: rgba(164, 102, 255, 0.12);
+  background: rgba(255, 190, 214, 0.2);
 }
 
 .final-secret-stars {
@@ -1162,14 +1266,35 @@ body.site-secret-awakened .secret-submit {
   animation: secretTwinkle 8s ease-in-out infinite alternate;
 }
 
-.final-secret-lead,
-.final-secret-note {
+.final-secret-stage .card-label {
+  color: rgba(255, 226, 236, 0.88);
+  text-shadow: 0 1px 10px rgba(41, 14, 25, 0.24);
+}
+
+.final-secret-stage h2 {
+  color: rgba(255, 247, 250, 0.98);
+  text-shadow: 0 3px 20px rgba(30, 10, 18, 0.28);
+}
+
+.final-secret-stage .final-secret-lead,
+.final-secret-stage .final-secret-note {
   position: relative;
   z-index: 1;
   max-width: 680px;
   margin: 18px auto 0;
   line-height: 1.86;
-  color: rgba(255, 239, 245, 0.88);
+  text-shadow: 0 1px 10px rgba(55, 19, 33, 0.18);
+}
+
+.final-secret-stage .final-secret-lead {
+  color: rgba(255, 239, 245, 0.94);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.final-secret-stage .final-secret-note {
+  color: rgba(255, 221, 232, 0.78);
 }
 
 .final-secret-card {
@@ -1179,16 +1304,37 @@ body.site-secret-awakened .secret-submit {
   margin-top: 24px;
   padding: 24px 22px;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 252, 253, 0.3), rgba(255, 243, 247, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  box-shadow:
+    0 22px 42px rgba(24, 8, 17, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .final-secret-card p {
   margin: 0;
   line-height: 1.86;
+  color: rgba(88, 28, 50, 0.94);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .final-secret-card p + p {
   margin-top: 14px;
+  color: rgba(104, 41, 64, 0.92);
+}
+
+.final-secret-card .secret-placeholder {
+  margin-top: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 245, 248, 0.38));
+  border-color: rgba(200, 76, 103, 0.22);
+  color: rgba(123, 44, 72, 0.98);
+  font-weight: 500;
+}
+
+.final-secret-stage .secret-submit,
+.final-secret-stage .final-secret-link {
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .final-secret-actions {
@@ -1342,6 +1488,12 @@ body.site-secret-awakened .secret-submit {
   }
 }
 
+@media (max-width: 920px) {
+  .letter-tabs {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   .section-shell {
     width: min(calc(100% - 24px), var(--max-width));
@@ -1436,6 +1588,11 @@ body.site-secret-awakened .secret-submit {
 
   .letter-book {
     padding: 28px 22px;
+  }
+
+  .letter-tab {
+    padding: 14px 16px;
+    border-radius: 20px;
   }
 
   .letter-sheet {

@@ -146,7 +146,7 @@
         <section class="letter" id="letter">
           <div class="section-shell">
             <div class="section-heading reveal">
-              <p class="section-kicker">Apology &amp; Blessing</p>
+              <p class="section-kicker">遗憾与祝福</p>
               <h2>想放在页面正中央的，不只是喜欢</h2>
               <p>
                 前面的照片和视频只是铺垫，真正想郑重交给你的，是这一页写着道歉、祝福，也藏着喜欢的心里话。
@@ -156,17 +156,52 @@
             <div class="letter-layout">
               <article class="letter-book reveal">
                 <div class="letter-book-head">
-                  <span class="card-label">Heart Letter</span>
+                  <span class="card-label">心意信</span>
                   <h3>写给你的一页心里话</h3>
                   <p class="letter-intro">
                     如果前面的照片和视频是回忆留下来的证据，那这一部分，就是我最想认真放到你面前的文字。
                   </p>
                 </div>
 
+                <div class="letter-tabs" role="tablist" aria-label="心意信章节切换">
+                  <button
+                    class="letter-tab is-active"
+                    id="letterTabApology"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="letterPanelApology"
+                    data-letter-target="apology"
+                  >
+                    <span class="letter-tab-kicker">第一部分</span>
+                    <span class="letter-tab-title">遗憾</span>
+                  </button>
+                  <button
+                    class="letter-tab letter-tab-blessing"
+                    id="letterTabBlessing"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="letterPanelBlessing"
+                    data-letter-target="blessing"
+                    tabindex="-1"
+                  >
+                    <span class="letter-tab-kicker">第二部分</span>
+                    <span class="letter-tab-title">祝福</span>
+                    <span class="letter-tab-note">看完遗憾，也一定要点开</span>
+                  </button>
+                </div>
+
                 <div class="letter-sections">
-                  <section class="letter-sheet letter-sheet-apology">
+                  <section
+                    class="letter-sheet letter-sheet-apology"
+                    id="letterPanelApology"
+                    role="tabpanel"
+                    aria-labelledby="letterTabApology"
+                    data-letter-panel="apology"
+                  >
                     <div class="letter-sheet-header">
-                      <span class="letter-sheet-kicker">Part 01</span>
+                      <span class="letter-sheet-kicker">第一部分</span>
                       <h4>想认真说的一句对不起</h4>
                     </div>
                     <p>
@@ -176,19 +211,31 @@
                       我像是你生活中的 bug，被一个个补丁堵上思念你的去路的时候，我明白我的生活已经进入到了低潮的时刻。我害怕自己看到美的风景，害怕自己还会接触到有趣的事物，无法不去想每一件事如果你在我会不会更愿意参与。我将自己放逐在一个房间里，别人进不来，自己也出不去。
                     </p>
                     <p>
-                      渐渐地我明白一件事情，你是我超脱于感性与理性之间的第三种状态，一种答案之外的答案。我的心里太小，只能塞下你的影子，多一分拥挤，少一分不满。我知道，这一切都是我应得的惩罚。也许这一声道歉已经为时已晚，但是，对不起长官，我不应该丢下你。
+                      渐渐地我明白一件事情，你是我超脱于感性与理性之间的第三种状态，一种答案之外的答案。我的心里太小，只能塞下你的影子，多一分拥挤，少一分不满。
+                    </p>
+                    <!-- <p>
+                      我知道，这一切都是我应得的惩罚。也许是上天给了我一个奇妙的窗口，让我还能继续感触到长官的存在。我在《沦陷》与《沉溺》中听见长官对爱的期许，在《红》和《该死的眼泪》中触到长官的伤痕，从《茉莉雨》和《我还记得那天》中感到长官的孤独。一首一首歌的时间里，我仿佛看见长官的脆弱，也想象着长官每一个孤单的时刻。我没能把所有歌听完，因为每一句歌词对我来说都好似利剑。揭开那层抽象的面具之下，并不是对世界的乐观，而是渴望被理解、被共鸣的救赎。
+                    </p> -->
+                    <p>
+                      人总是在失去之后，才学会成长与珍惜。当“寂寞的枫叶~”响起时，我却已经不能在你身边。爱本该是生命的救赎，是孤独的解药，而我却做了一个自以为是的庸医。那一刻我才真正知道，我错了，错得离谱。也许这句道歉已经太晚了。但还是想说——对不起，长官。我不该丢下你。
                     </p>
                     <p>
                       我大概永远也学不会赤裸裸地表达自己的需求与情感。好比伸手去触碰一朵玫瑰，玫瑰那么美，我就会想玫瑰真的属于我吗？我总是假装自己并不需要，可我真不需要吗，不，我太需要了。
                     </p>
                     <p>
-                      我清楚地知道，走完这一步，也许我再也触及不到你了。但即使是现在，我仍然厚颜无耻地想要奢求你能为我留一个窗口，至少这样我可以知道你过得很好，也能反复记住自己究竟错在了哪里。
+                      我清楚地知道，走完这一步，也许我再也触及不到你了。但即使是现在，我仍然厚颜无耻地想要奢求你能为我留一个窗口，至少这样我可以知道你过得很好，知道我是个蠢蛋。至少这样我可以反复回味失去的心痛，反复的惩戒自己。
                     </p>
                   </section>
 
-                  <section class="letter-sheet letter-sheet-blessing">
+                  <section
+                    class="letter-sheet letter-sheet-blessing"
+                    id="letterPanelBlessing"
+                    role="tabpanel"
+                    aria-labelledby="letterTabBlessing"
+                    data-letter-panel="blessing"
+                  >
                     <div class="letter-sheet-header">
-                      <span class="letter-sheet-kicker">Part 02</span>
+                      <span class="letter-sheet-kicker">第二部分</span>
                       <h4>也想留给你的那些祝福</h4>
                     </div>
                     <p>
@@ -198,7 +245,19 @@
                       无论何时，总有人在世界不起眼的角落，为你在每一个雀跃的时刻鼓掌，在你每一次自我怀疑的时候坚定支持，在你每一次孤单失意的脉搏里，把“信念永存”轻轻放回去。
                     </p>
                     <p>
-                      最后的最后，我是一个线上逼逼赖赖，线下屁不能放的人。认识这么久了，其实我从没有形容过你在我心里的美，这一次，我想认真告诉你：与我而言，你像春日清晨的早樱，像夏天傍晚的橘子海，像秋日午后的红枫，也像冬天夜晚的白雪。
+                      最后的最后，我是一个线上逼逼赖赖，线下屁不能放的人。认识这么久了，其实我从没有形容过你在我心里的美，这一次，我想认真告诉你：
+                    </p>
+                    <p>
+                      与我而言，我想你应该是春日清晨的早樱，粉色的花瓣在空气里慢慢漂浮，像一场柔软的雪，连阳光都会变得温柔；
+                    </p>
+                    <p>
+                      与我而言，我想你应该是夏天傍晚的橘子海，傍晚的天空有汽水一样的气泡，光是橙色的，连海风都带一点甜味；
+                    </p>
+                    <p>
+                      与我而言，我想你应该是秋日午后的红枫，慵懒的阳光照射在你红红的脸颊上，沙沙的向世界诉说着你的情话；
+                    </p>
+                    <p>
+                      与我而言，我想你应该是冬天夜晚的白雪，翩翩在寒风里潇洒，飞扬！飞扬！让人期待在下一个转角与你相遇。
                     </p>
                     <p>
                       所以不管荒野的列车会不会再次经过同一站，我都希望你一直发光，永远被爱，永远有勇气，也永远记得自己本来就值得所有明亮和偏爱。
@@ -368,7 +427,7 @@
             </p>
             <div class="final-secret-card">
               <p class="secret-placeholder">
-                从我看见你的那一刻起，我就已经喜欢你了。
+                从我看见你的那一刻起，我就已经喜欢你了。喜欢到，会对所有和你长得像的人心动，但却只喜欢你；喜欢到即使是出轨，也希望出轨的对象是你。
               </p>
               <p>
                 如果这一句会被你好好收下，那这条彩蛋线就算没有白亮一次。剩下那些更轻一点、也更私密一点的话，就让下面的小星星替我慢慢说。

@@ -742,6 +742,70 @@ const setupMusicPlayer = (petalController) => {
   };
 };
 
+const setupLetterTabs = () => {
+  const tabs = Array.from(document.querySelectorAll("[data-letter-target]"));
+  const panels = Array.from(document.querySelectorAll("[data-letter-panel]"));
+
+  if (tabs.length === 0 || panels.length === 0) {
+    return;
+  }
+
+  const activateTab = (target, shouldFocus = false) => {
+    tabs.forEach((tab) => {
+      const isCurrent = tab.dataset.letterTarget === target;
+      tab.classList.toggle("is-active", isCurrent);
+      tab.setAttribute("aria-selected", String(isCurrent));
+      tab.tabIndex = isCurrent ? 0 : -1;
+
+      if (isCurrent && shouldFocus) {
+        tab.focus();
+      }
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.letterPanel !== target;
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      activateTab(tab.dataset.letterTarget);
+    });
+
+    tab.addEventListener("keydown", (event) => {
+      const keyToOffset = {
+        ArrowLeft: -1,
+        ArrowUp: -1,
+        ArrowRight: 1,
+        ArrowDown: 1,
+      };
+
+      if (event.key === "Home") {
+        event.preventDefault();
+        activateTab(tabs[0].dataset.letterTarget, true);
+        return;
+      }
+
+      if (event.key === "End") {
+        event.preventDefault();
+        activateTab(tabs[tabs.length - 1].dataset.letterTarget, true);
+        return;
+      }
+
+      if (!(event.key in keyToOffset)) {
+        return;
+      }
+
+      event.preventDefault();
+      const nextIndex = (index + keyToOffset[event.key] + tabs.length) % tabs.length;
+      activateTab(tabs[nextIndex].dataset.letterTarget, true);
+    });
+  });
+
+  const defaultTab = tabs.find((tab) => tab.classList.contains("is-active")) ?? tabs[0];
+  activateTab(defaultTab.dataset.letterTarget);
+};
+
 const setupVideoMusicSync = (musicState) => {
   const activeVideo = document.getElementById("activeVideo");
 
@@ -760,6 +824,7 @@ const setupVideoMusicSync = (musicState) => {
 renderPhotoWall();
 renderVideoShowcase();
 setupReveal();
+setupLetterTabs();
 setupSecretEgg();
 const petalController = setupPetals();
 const musicState = setupMusicPlayer(petalController);
