@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>给你的一封真心信</title>
+    <meta
+      name="description"
+      content="一个用照片、影像与文字承载喜欢、道歉与祝福的静态页面。"
+    />
+    <link rel="icon" href="./images/cute_panda.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="petal-layer" id="petalLayer" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="hero" id="top">
+        <div class="hero-backdrop"></div>
+        <div class="section-shell hero-layout">
+          <div class="hero-copy reveal">
+            <p class="section-kicker">A page for one very important person</p>
+            <h1>
+              给你的一封
+              <br />
+              真心信
+            </h1>
+            <p class="hero-lead">
+              这次我想把喜欢、歉意和祝福都写得认真一点。
+              <br />
+              不只是说一句“我喜欢你”，也想把那些来不及说出口的对不起、那些真心希望你被世界温柔以待的祝福，安安静静地放进这一页里。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#letter">读完这封信</a>
+              <a class="button button-secondary" href="#moments">先看照片和影像</a>
+            </div>
+          </div>
+
+          <aside class="hero-aside">
+            <div class="hero-card reveal">
+              <span class="card-label">想先偷偷告诉你</span>
+              <p>
+                这一页里写的，不只是心动，还有我迟到的对不起，和一直舍不得撤回的祝福。
+              </p>
+            </div>
+            <div class="hero-card reveal">
+              <span class="card-label">如果你愿意继续看下去</span>
+              <ul class="promise-list">
+                <li>会看到我认真想说的一句对不起</li>
+                <li>会看到我想安稳交给你的那些祝福</li>
+                <li>也会看到藏在彩蛋里，只想给你一个人看的话</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <div class="scroll-hint">
+          <a href="#moments">开始往下看</a>
+        </div>
+      </header>
+
+      <div class="music-player" id="musicPlayer">
+        <span class="music-label">背景音乐</span>
+        <div class="music-head">
+          <div class="music-meta">
+            <h2 id="trackTitle">准备播放中</h2>
+            <p id="trackStatus">正在加载 BGM...</p>
+          </div>
+          <div class="music-actions">
+            <button class="player-button" id="musicToggle" type="button">播放</button>
+            <button class="player-button player-button-secondary" id="musicNext" type="button">
+              下一首
+            </button>
+          </div>
+        </div>
+        <div class="music-progress">
+          <span id="currentTime">00:00</span>
+          <input id="progressRange" type="range" min="0" max="100" value="0" />
+          <span id="durationTime">00:00</span>
+        </div>
+        <div class="music-volume">
+          <span>音量</span>
+          <input id="volumeRange" type="range" min="0" max="100" value="60" />
+        </div>
+        <audio id="bgm" preload="metadata"></audio>
+      </div>
+
+      <main>
+        <section class="moments" id="moments">
+          <div class="section-shell">
+            <div class="section-heading reveal">
+              <p class="section-kicker">Moments</p>
+              <h2>只保留这一条为你滚动的照片栏</h2>
+              <p>
+                你换了新的照片，我也想把这一页重新整理成更像现在的样子。
+                这次我把重复的静态展示拿掉了，只留下这一段会一直轻轻流动的心动瞬间。
+              </p>
+            </div>
+
+            <div class="marquee-panel reveal">
+              <div class="marquee-row" id="marqueeRowOne"></div>
+              <div class="marquee-row marquee-row-reverse" id="marqueeRowTwo"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="video-story" id="videoStory">
+          <div class="section-shell">
+            <div class="section-heading reveal">
+              <p class="section-kicker">Video Story</p>
+              <h2>想收藏下来的动态片段</h2>
+              <p>
+                照片会把时间定格，视频会把心动延长。
+                如果你点开它们，左下角的 BGM 会自动暂停，避免两边声音打架。
+              </p>
+            </div>
+
+            <div class="video-showcase reveal">
+              <article class="video-stage-card">
+                <div class="video-stage">
+                  <video
+                    id="activeVideo"
+                    class="story-video active-story-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                  ></video>
+                </div>
+                <div class="video-stage-copy">
+                  <span class="card-label">心动影像</span>
+                  <h3 id="activeVideoTitle">准备加载视频</h3>
+                  <p id="activeVideoNote">选择下面任意一个片段，就能在这里播放。</p>
+                </div>
+              </article>
+              <div class="video-picker" id="videoPicker"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="letter" id="letter">
+          <div class="section-shell">
+            <div class="section-heading reveal">
+              <p class="section-kicker">Apology &amp; Blessing</p>
+              <h2>想放在页面正中央的，不只是喜欢</h2>
+              <p>
+                前面的照片和视频只是铺垫，真正想郑重交给你的，是这一页写着道歉、祝福，也藏着喜欢的心里话。
+              </p>
+            </div>
+
+            <div class="letter-layout">
+              <article class="letter-book reveal">
+                <div class="letter-book-head">
+                  <span class="card-label">Heart Letter</span>
+                  <h3>写给你的一页心里话</h3>
+                  <p class="letter-intro">
+                    如果前面的照片和视频是回忆留下来的证据，那这一部分，就是我最想认真放到你面前的文字。
+                  </p>
+                </div>
+
+                <div class="letter-sections">
+                  <section class="letter-sheet letter-sheet-apology">
+                    <div class="letter-sheet-header">
+                      <span class="letter-sheet-kicker">Part 01</span>
+                      <h4>想认真说的一句对不起</h4>
+                    </div>
+                    <p>
+                      我们是在双向的奔赴中相遇的，却是在不明不白的雾里面走失的。我说过我不该再打搅你，但是我不得不承认，我食言了，我根本没办法放下你，即使是现在。我说不出祝福的话，因为我怕你会忘了我。
+                    </p>
+                    <p>
+                      我像是你生活中的 bug，被一个个补丁堵上思念你的去路的时候，我明白我的生活已经进入到了低潮的时刻。我害怕自己看到美的风景，害怕自己还会接触到有趣的事物，无法不去想每一件事如果你在我会不会更愿意参与。我将自己放逐在一个房间里，别人进不来，自己也出不去。
+                    </p>
+                    <p>
+                      渐渐地我明白一件事情，你是我超脱于感性与理性之间的第三种状态，一种答案之外的答案。我的心里太小，只能塞下你的影子，多一分拥挤，少一分不满。我知道，这一切都是我应得的惩罚。也许这一声道歉已经为时已晚，但是，对不起长官，我不应该丢下你。
+                    </p>
+                    <p>
+                      我大概永远也学不会赤裸裸地表达自己的需求与情感。好比伸手去触碰一朵玫瑰，玫瑰那么美，我就会想玫瑰真的属于我吗？我总是假装自己并不需要，可我真不需要吗，不，我太需要了。
+                    </p>
+                    <p>
+                      我清楚地知道，走完这一步，也许我再也触及不到你了。但即使是现在，我仍然厚颜无耻地想要奢求你能为我留一个窗口，至少这样我可以知道你过得很好，也能反复记住自己究竟错在了哪里。
+                    </p>
+                  </section>
+
+                  <section class="letter-sheet letter-sheet-blessing">
+                    <div class="letter-sheet-header">
+                      <span class="letter-sheet-kicker">Part 02</span>
+                      <h4>也想留给你的那些祝福</h4>
+                    </div>
+                    <p>
+                      不知荒野的列车还会不会在下一站遇见，但是如果我们真的再也不见了，我仍然想要告诉你，你特别棒，人很棒，性格很棒，身材也很棒，三观更棒，不要怀疑自己，你本来就是太阳。
+                    </p>
+                    <p>
+                      无论何时，总有人在世界不起眼的角落，为你在每一个雀跃的时刻鼓掌，在你每一次自我怀疑的时候坚定支持，在你每一次孤单失意的脉搏里，把“信念永存”轻轻放回去。
+                    </p>
+                    <p>
+                      最后的最后，我是一个线上逼逼赖赖，线下屁不能放的人。认识这么久了，其实我从没有形容过你在我心里的美，这一次，我想认真告诉你：与我而言，你像春日清晨的早樱，像夏天傍晚的橘子海，像秋日午后的红枫，也像冬天夜晚的白雪。
+                    </p>
+                    <p>
+                      所以不管荒野的列车会不会再次经过同一站，我都希望你一直发光，永远被爱，永远有勇气，也永远记得自己本来就值得所有明亮和偏爱。
+                    </p>
+                  </section>
+                </div>
+                <p class="letter-closing">
+                  如果这页信最后真的能被你好好看到，我最想让你知道的是：我对你的喜欢没有消失，对自己的后悔也是真的，而认真祝你幸福这件事，我会一直放在心上。
+                </p>
+                <p class="letter-signature">写这页信的人</p>
+              </article>
+
+              <aside class="letter-side reveal">
+                <div class="side-card">
+                  <span class="card-label">我最想让你记得</span>
+                  <h3 class="side-card-title">你本来就是太阳</h3>
+                  <ul class="promise-list">
+                    <li>不要怀疑自己，你本来就值得被认真喜欢</li>
+                    <li>总有人会在不起眼的角落，为你的每一次雀跃鼓掌</li>
+                    <li>就算有一天真的走散了，也还是希望你一路发光</li>
+                  </ul>
+                </div>
+
+                <div class="side-card quote-card">
+                  <span class="card-label">四季里的你</span>
+                  <p>
+                    “与我而言，你像春日早樱、夏日晚海、秋日红枫，也像冬夜白雪。”
+                  </p>
+                </div>
+
+                <div class="side-card note-card">
+                  <span class="card-label">夜色备注</span>
+                  <p>今晚的月色依旧美，桂花也很香。是吗，玉兔。</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <div class="section-shell footer-content">
+          <p>这一页的照片、视频和文字，最后想交给你的，是喜欢，是迟到的道歉，也是认真写下的祝福。</p>
+          <a class="footer-link" href="#top">回到最开始</a>
+        </div>
+      </footer>
+
+      <div class="floating-easter-egg">
+        <button
+          class="easter-entry"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="secretOverlay"
+        >
+          <span class="entry-tooltip">请勿随意点击小八</span>
+          <img class="entry-gif" src="./images/Chiikawa.gif" alt="小八彩蛋入口" />
+          <span class="entry-label">点点小八</span>
+        </button>
+      </div>
+
+      <div class="secret-overlay" id="secretOverlay" hidden>
+        <div class="secret-backdrop" data-secret-close></div>
+
+        <section
+          class="secret-screen secret-screen-question is-active"
+          data-secret-stage="question-one"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="secretQuestionOneTitle"
+        >
+          <button class="secret-close" type="button" data-secret-close aria-label="关闭彩蛋">
+            ×
+          </button>
+          <span class="card-label">Secret 01</span>
+          <h2 id="secretQuestionOneTitle">如果有一张去往岛屿的机票，那个岛的名字是？</h2>
+          <p class="secret-placeholder">
+            与我而言，你就是你。世界上美好的东西太多了，立秋傍晚从河对岸吹来的风，风与黄昏，水与篝火，我都不缺。可当我清楚地看见你，才忽然明白，那些都不过是世界的铺垫而已。
+          </p>
+          <p>
+            你就像一株蒲公英，轻轻落在我的生活里，却又不像任何人。写你的名字可真难，因为每一笔都像在触碰心事。
+          </p>
+          <form class="secret-form" id="secretFormOne">
+            <input
+              id="secretAnswerOne"
+              class="secret-input"
+              type="text"
+              placeholder="在这里输入答案"
+              autocomplete="off"
+            />
+            <button class="secret-submit" type="submit">解锁下一段</button>
+          </form>
+          <p class="secret-feedback" id="secretFeedbackOne" aria-live="polite"></p>
+        </section>
+
+        <section class="secret-screen secret-screen-memory" data-secret-stage="question-two" hidden>
+          <button class="secret-close" type="button" data-secret-close aria-label="关闭彩蛋">
+            ×
+          </button>
+          <span class="card-label">Secret 02</span>
+          <div class="secret-memory-layout">
+            <div class="secret-memory-copy">
+              <h2>如果你有一颗复活石，你还愿意复活他吗？</h2>
+              <p class="secret-placeholder">
+                你的眼睛真好看，但我的眼睛更好看，因为我的眼睛里，看见了你。
+              </p>
+              <p>
+                人们从诗人的字句里选取自己心爱的意义，而我只想在所有句子之间，做一个小小的逗号，停在你身旁，不必结束，也不必远去。
+              </p>
+            </div>
+            <figure class="secret-figure">
+              <img src="./images/snitch.jpg" alt="Snitch 彩蛋图" />
+            </figure>
+          </div>
+          <form class="secret-form" id="secretFormTwo">
+            <input
+              id="secretAnswerTwo"
+              class="secret-input"
+              type="text"
+              placeholder="写下那句关于以后的答案"
+              autocomplete="off"
+            />
+            <button class="secret-submit" type="submit">前往 ruby 页面</button>
+          </form>
+          <p class="secret-feedback" id="secretFeedbackTwo" aria-live="polite"></p>
+        </section>
+
+        <section class="secret-screen secret-screen-ruby" data-secret-stage="ruby" hidden>
+          <button class="secret-close" type="button" data-secret-close aria-label="关闭彩蛋">
+            ×
+          </button>
+          <span class="card-label">Secret 03</span>
+          <div class="ruby-layout">
+            <div class="ruby-copy">
+              <h2>最后一句藏在红宝石里</h2>
+              <p class="secret-placeholder">
+                我想给你讲个故事：是大栗色兔子和小栗色兔子的故事。
+              </p>
+              <p>
+                我讲完啦。真正想说的那句答案，还藏在它重新亮起来之后。
+              </p>
+              <p class="ruby-instruction">
+                最后一个仪式由我来设计：
+                请按住下面的红宝石 2.8 秒，让它慢慢发光。它亮起来的时候，这条彩蛋线也会替我把最后一句话说完。
+              </p>
+              <div class="ruby-progress">
+                <div class="ruby-progress-bar" id="rubyProgressBar"></div>
+              </div>
+            </div>
+            <button class="ruby-ritual" id="rubyRitual" type="button">
+              <img src="./images/ruby.jpg" alt="Ruby 彩蛋图" />
+              <span class="ruby-ritual-label">按住点亮红宝石</span>
+            </button>
+          </div>
+          <p class="secret-feedback" id="rubyFeedback" aria-live="polite"></p>
+        </section>
+
+        <section class="secret-screen secret-screen-final" data-secret-stage="final" hidden>
+          <button class="secret-close" type="button" data-secret-close aria-label="关闭彩蛋">
+            ×
+          </button>
+          <div class="final-secret-stage">
+            <div class="final-secret-stars" aria-hidden="true"></div>
+            <span class="card-label">Final Secret</span>
+            <h2>终极彩蛋：故事最后一句</h2>
+            <p class="final-secret-lead">
+              我讲完啦。因为故事其实很简单，所以最后这一页，只想把它重新认真地说一遍。
+            </p>
+            <div class="final-secret-card">
+              <p class="secret-placeholder">
+                从我看见你的那一刻起，我就已经喜欢你了。
+              </p>
+              <p>
+                如果这一句会被你好好收下，那这条彩蛋线就算没有白亮一次。剩下那些更轻一点、也更私密一点的话，就让下面的小星星替我慢慢说。
+              </p>
+            </div>
+            <div class="final-secret-actions">
+              <button class="secret-submit" id="finalSecretBlessing" type="button">
+                再收下一句偷偷话
+              </button>
+              <a class="final-secret-link" href="#top">带着彩蛋回到开头</a>
+            </div>
+            <p class="final-secret-note" id="finalSecretNote">
+              彩蛋已经解锁了，剩下那些更轻一点的话，会由下面的小星星继续替我说。
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/my.js"></script>
+  </body>
+</html>
