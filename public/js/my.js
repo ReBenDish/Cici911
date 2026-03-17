@@ -1,51 +1,71 @@
 const photoData = [
-  { file: "微信图片_20260315174142_4_13.jpg", width: 1158, height: 1158, alt: "照片 01" },
-  { file: "微信图片_20260315174143_5_13.jpg", width: 1280, height: 1706, alt: "照片 02" },
-  { file: "微信图片_20260315174143_6_13.jpg", width: 1280, height: 1706, alt: "照片 03" },
-  { file: "微信图片_20260315174233_9_13.jpg", width: 1279, height: 1706, alt: "照片 04" },
-  { file: "微信图片_20260315174318_10_13.jpg", width: 1080, height: 1432, alt: "照片 05" },
-  { file: "微信图片_20260315174319_11_13.jpg", width: 884, height: 1570, alt: "照片 06" },
-  { file: "微信图片_20260315174319_12_13.jpg", width: 1080, height: 1440, alt: "照片 07" },
-  { file: "微信图片_20260315174330_13_13.jpg", width: 1180, height: 1180, alt: "照片 08" },
-  { file: "微信图片_20260315174331_14_13.jpg", width: 886, height: 886, alt: "照片 09" },
-  { file: "微信图片_20260315174332_15_13.jpg", width: 1180, height: 1180, alt: "照片 10" },
-  { file: "微信图片_20260315174912_17_13.jpg", width: 2048, height: 681, alt: "照片 11" },
-  { file: "微信图片_20260315174914_18_13.jpg", width: 2048, height: 677, alt: "照片 12" },
-  { file: "微信图片_20260315174914_19_13.jpg", width: 680, height: 676, alt: "照片 13" },
-  { file: "微信图片_20260315174915_20_13.jpg", width: 676, height: 681, alt: "照片 14" },
-  { file: "微信图片_20260315174916_21_13.jpg", width: 679, height: 679, alt: "照片 15" },
-  { file: "微信图片_20260315174917_22_13.jpg", width: 2048, height: 676, alt: "照片 16" },
-  { file: "微信图片_20260315174917_23_13.jpg", width: 681, height: 679, alt: "照片 17" },
-  { file: "微信图片_20260315174926_24_13.jpg", width: 4096, height: 1344, alt: "照片 18" },
-  { file: "微信图片_20260315174927_25_13.jpg", width: 683, height: 679, alt: "照片 19" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174142_4_13.jpg", width: 1158, height: 1158, alt: "\u7167\u7247 01" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174143_5_13.jpg", width: 1280, height: 1706, alt: "\u7167\u7247 02" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174143_6_13.jpg", width: 1280, height: 1706, alt: "\u7167\u7247 03" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174233_9_13.jpg", width: 1279, height: 1706, alt: "\u7167\u7247 04" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174318_10_13.jpg", width: 1080, height: 1432, alt: "\u7167\u7247 05" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174319_11_13.jpg", width: 884, height: 1570, alt: "\u7167\u7247 06" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174319_12_13.jpg", width: 1080, height: 1440, alt: "\u7167\u7247 07" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174330_13_13.jpg", width: 1180, height: 1180, alt: "\u7167\u7247 08" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174331_14_13.jpg", width: 886, height: 886, alt: "\u7167\u7247 09" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174332_15_13.jpg", width: 1180, height: 1180, alt: "\u7167\u7247 10" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174912_17_13.jpg", width: 2048, height: 681, alt: "\u7167\u7247 11" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174914_18_13.jpg", width: 2048, height: 677, alt: "\u7167\u7247 12" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174914_19_13.jpg", width: 680, height: 676, alt: "\u7167\u7247 13" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174915_20_13.jpg", width: 676, height: 681, alt: "\u7167\u7247 14" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174916_21_13.jpg", width: 679, height: 679, alt: "\u7167\u7247 15" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174917_22_13.jpg", width: 2048, height: 676, alt: "\u7167\u7247 16" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174917_23_13.jpg", width: 681, height: 679, alt: "\u7167\u7247 17" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174926_24_13.jpg", width: 4096, height: 1344, alt: "\u7167\u7247 18" },
+  { file: "\u5fae\u4fe1\u56fe\u7247_20260315174927_25_13.jpg", width: 683, height: 679, alt: "\u7167\u7247 19" },
 ];
 
 const videoData = [
   {
-    file: "微信视频2026-03-15_175110_124.mp4",
+    file: "\u5fae\u4fe1\u89c6\u98912026-03-15_175110_124.mp4",
     width: 1280,
     height: 720,
     duration: "00:37",
-    title: "把心动延长成会动的片段",
-    note: "最长的一段影像，放在主播放器里会更舒服，也不会让整段版面被竖视频拖长。",
+    title: "\u628a\u5fc3\u52a8\u5ef6\u957f\u6210\u4f1a\u52a8\u7684\u7247\u6bb5",
+    note: "\u6700\u957f\u7684\u4e00\u6bb5\u5f71\u50cf\uff0c\u653e\u5728\u4e3b\u64ad\u653e\u5668\u91cc\u4f1a\u66f4\u8212\u670d\uff0c\u4e5f\u4e0d\u4f1a\u8ba9\u6574\u6bb5\u7248\u9762\u88ab\u7ad6\u89c6\u9891\u62d6\u5f97\u592a\u957f\u3002",
   },
   {
-    file: "微信视频2026-03-15_175053_931.mp4",
+    file: "\u5fae\u4fe1\u89c6\u98912026-03-15_175053_931.mp4",
     width: 720,
     height: 1280,
     duration: "00:06",
-    title: "几秒钟也足够让人记很久",
-    note: "很短，但一眼就会想收藏下来。",
+    title: "\u51e0\u79d2\u949f\u4e5f\u8db3\u591f\u8ba9\u4eba\u8bb0\u5f88\u4e45",
+    note: "\u5f88\u77ed\uff0c\u4f46\u4e00\u773c\u5c31\u4f1a\u60f3\u6536\u85cf\u4e0b\u6765\u3002",
   },
   {
-    file: "微信视频2026-03-15_175158_156.mp4",
+    file: "\u5fae\u4fe1\u89c6\u98912026-03-15_175158_156.mp4",
     width: 544,
     height: 960,
     duration: "00:08",
-    title: "想悄悄反复回看的小瞬间",
-    note: "不是为了热闹，只是因为喜欢。",
+    title: "\u60f3\u5077\u5077\u53cd\u590d\u56de\u770b\u7684\u5c0f\u77ac\u95f4",
+    note: "\u4e0d\u662f\u4e3a\u4e86\u70ed\u95f9\uff0c\u53ea\u662f\u56e0\u4e3a\u559c\u6b22\u3002",
   },
 ];
+
+const showcaseVideoData = [
+  ...videoData,
+  {
+    file: "\u5fae\u4fe1\u89c6\u98912026-03-15_183206_619.mp4",
+    width: 720,
+    height: 1280,
+    duration: "00:12",
+    chipLabel: "\u8865\u5145\u7247\u6bb5",
+    title: "\u540e\u6765\u53c8\u60f3\u8865\u8fdb\u6765\u7684\u90a3\u4e00\u6bb5",
+    note: "video \u76ee\u5f55\u91cc\u7684\u5e38\u89c4\u89c6\u9891\u8fd9\u6b21\u90fd\u5df2\u7ecf\u653e\u8fdb\u6765\u4e86\u3002",
+  },
+];
+
+const finalSecretVideo = {
+  file: "finalSecrete.mp4",
+  chipLabel: "\u7ec8\u6781\u5f69\u86cb",
+  title: "Final Secret",
+  note: "\u89e6\u53d1\u7ec8\u6781\u5f69\u86cb\u5e76\u56de\u5230\u4e3b\u9875\u540e\uff0c\u624d\u4f1a\u591a\u51fa\u8fd9\u4e00\u4e2a\u53ef\u64ad\u653e\u7684\u9009\u9879\u3002",
+};
 
 const playlist = [
   {
@@ -68,10 +88,10 @@ const petalImages = [
 ];
 
 const finalBlessings = [
-  "世界上美好的东西很多，可当我看见你时，它们都更像是在为你铺垫。",
-  "写你的名字还是很难，因为每一笔都像在触碰心事。",
-  "你的眼睛很好看，而我的眼睛里，一直都看见你。",
-  "如果可以，我还是想做那个停在你身旁的小小逗号。",
+  "\u4e16\u754c\u4e0a\u7f8e\u597d\u7684\u4e1c\u897f\u5f88\u591a\uff0c\u53ef\u5f53\u6211\u770b\u89c1\u4f60\u65f6\uff0c\u5b83\u4eec\u90fd\u66f4\u50cf\u662f\u5728\u4e3a\u4f60\u94fa\u57ab\u3002",
+  "\u5199\u4f60\u7684\u540d\u5b57\u8fd8\u662f\u5f88\u96be\uff0c\u56e0\u4e3a\u6bcf\u4e00\u7b14\u90fd\u50cf\u5728\u89e6\u78b0\u5fc3\u4e8b\u3002",
+  "\u4f60\u7684\u773c\u775b\u5f88\u597d\u770b\uff0c\u800c\u6211\u7684\u773c\u775b\u91cc\uff0c\u4e00\u76f4\u90fd\u770b\u89c1\u4f60\u3002",
+  "\u5982\u679c\u53ef\u4ee5\uff0c\u6211\u8fd8\u662f\u60f3\u505a\u90a3\u4e2a\u505c\u5728\u4f60\u8eab\u65c1\u7684\u5c0f\u5c0f\u9017\u53f7\u3002",
 ];
 
 const classifyShape = (width, height) => {
@@ -96,7 +116,13 @@ const classifyShape = (width, height) => {
   return "square";
 };
 
-const describeVideoShape = (width, height) => (width >= height ? "横屏片段" : "竖屏片段");
+const describeVideoShape = (video) => {
+  if (video.chipLabel) {
+    return video.chipLabel;
+  }
+
+  return video.width >= video.height ? "\u6a2a\u5c4f\u7247\u6bb5" : "\u7ad6\u5c4f\u7247\u6bb5";
+};
 
 const normalizeAnswer = (value) => value.replace(/\s+/g, "").trim();
 
@@ -157,12 +183,13 @@ const renderVideoShowcase = () => {
     return null;
   }
 
-  let activeIndex = 0;
+  const visibleVideos = [...showcaseVideoData];
   const optionButtons = [];
+  let activeIndex = 0;
 
   const updateActiveVideo = (index) => {
-    const nextIndex = (index + videoData.length) % videoData.length;
-    const nextVideo = videoData[nextIndex];
+    const nextIndex = (index + visibleVideos.length) % visibleVideos.length;
+    const nextVideo = visibleVideos[nextIndex];
     const shouldResume = !activeVideo.paused && !activeVideo.ended;
 
     activeIndex = nextIndex;
@@ -183,7 +210,7 @@ const renderVideoShowcase = () => {
     }
   };
 
-  videoData.forEach((videoItem, index) => {
+  const createOptionButton = (videoItem, index) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "video-option";
@@ -194,11 +221,11 @@ const renderVideoShowcase = () => {
 
     const chip = document.createElement("span");
     chip.className = "video-chip";
-    chip.textContent = describeVideoShape(videoItem.width, videoItem.height);
+    chip.textContent = describeVideoShape(videoItem);
 
     const duration = document.createElement("span");
     duration.className = "video-duration";
-    duration.textContent = videoItem.duration;
+    duration.textContent = videoItem.duration ?? "";
 
     const name = document.createElement("h3");
     name.className = "video-name";
@@ -209,7 +236,11 @@ const renderVideoShowcase = () => {
     note.textContent = videoItem.note;
 
     top.appendChild(chip);
-    top.appendChild(duration);
+
+    if (videoItem.duration) {
+      top.appendChild(duration);
+    }
+
     button.appendChild(top);
     button.appendChild(name);
     button.appendChild(note);
@@ -220,6 +251,19 @@ const renderVideoShowcase = () => {
 
     optionButtons.push(button);
     videoPicker.appendChild(button);
+  };
+
+  const unlockFinalSecretVideo = () => {
+    if (visibleVideos.some((videoItem) => videoItem.file === finalSecretVideo.file)) {
+      return;
+    }
+
+    visibleVideos.push(finalSecretVideo);
+    createOptionButton(finalSecretVideo, visibleVideos.length - 1);
+  };
+
+  visibleVideos.forEach((videoItem, index) => {
+    createOptionButton(videoItem, index);
   });
 
   updateActiveVideo(0);
@@ -227,6 +271,7 @@ const renderVideoShowcase = () => {
   return {
     activeVideo,
     updateActiveVideo,
+    unlockFinalSecretVideo,
   };
 };
 
@@ -333,7 +378,7 @@ const setupReveal = () => {
   revealItems.forEach((item) => observer.observe(item));
 };
 
-const setupSecretEgg = () => {
+const setupSecretEgg = (videoShowcase) => {
   const entry = document.querySelector(".easter-entry");
   const overlay = document.getElementById("secretOverlay");
   const screens = Array.from(document.querySelectorAll("[data-secret-stage]"));
@@ -445,6 +490,10 @@ const setupSecretEgg = () => {
     overlay.hidden = true;
     document.body.classList.remove("secret-open");
     cancelRubyHold(true);
+
+    if (state.finalUnlocked) {
+      videoShowcase?.unlockFinalSecretVideo();
+    }
   };
 
   entry.addEventListener("click", () => {
@@ -466,12 +515,12 @@ const setupSecretEgg = () => {
   formOne.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (normalizeAnswer(answerOne.value) !== "巴厘岛") {
-      setFeedback(feedbackOne, "再想想那张通往热带海风的机票，答案是三个字。");
+    if (normalizeAnswer(answerOne.value) !== "\u5df4\u5398\u5c9b") {
+      setFeedback(feedbackOne, "\u518d\u60f3\u60f3\u90a3\u5f20\u901a\u5f80\u70ed\u5e26\u6d77\u98ce\u7684\u673a\u7968\uff0c\u7b54\u6848\u662f\u4e09\u4e2a\u5b57\u3002");
       return;
     }
 
-    setFeedback(feedbackOne, "你还记得，那我就继续往下说。", "success");
+    setFeedback(feedbackOne, "\u4f60\u8fd8\u8bb0\u5f97\uff0c\u90a3\u6211\u5c31\u7ee7\u7eed\u5f80\u4e0b\u8bf4\u3002", "success");
     window.setTimeout(() => {
       showStage("question-two");
       answerTwo.focus();
@@ -481,12 +530,12 @@ const setupSecretEgg = () => {
   formTwo.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    if (normalizeAnswer(answerTwo.value) !== "愿意") {
-      setFeedback(feedbackTwo, "不是简单的愿意，是更像一段未来的那句话。");
+    if (normalizeAnswer(answerTwo.value) !== "\u613f\u610f") {
+      setFeedback(feedbackTwo, "\u4e0d\u662f\u7b80\u5355\u7684\u201c\u613f\u610f\u201d\uff0c\u662f\u66f4\u50cf\u4e00\u6bb5\u672a\u6765\u7684\u90a3\u53e5\u8bdd\u3002");
       return;
     }
 
-    setFeedback(feedbackTwo, "你写下了以后，那我就带你去看最后一句。", "success");
+    setFeedback(feedbackTwo, "\u4f60\u5199\u4e0b\u4e86\u4ee5\u540e\uff0c\u90a3\u6211\u5c31\u5e26\u4f60\u53bb\u770b\u6700\u540e\u4e00\u53e5\u3002", "success");
     window.setTimeout(() => {
       showStage("ruby");
     }, 360);
@@ -501,7 +550,7 @@ const setupSecretEgg = () => {
     cancelRubyHold(false);
     rubyProgressBar.style.width = "100%";
     rubyRitual.classList.add("is-complete");
-    setFeedback(rubyFeedback, "红宝石已经亮起来了，最后一句也替你打开了。", "success");
+    setFeedback(rubyFeedback, "\u7ea2\u5b9d\u77f3\u5df2\u7ecf\u4eae\u8d77\u6765\u4e86\uff0c\u6700\u540e\u4e00\u53e5\u4e5f\u66ff\u4f60\u6253\u5f00\u4e86\u3002", "success");
     document.body.classList.add("site-secret-awakened");
 
     window.setTimeout(() => {
@@ -522,7 +571,7 @@ const setupSecretEgg = () => {
     cancelRubyHold(true);
     state.holdStartTime = performance.now();
     rubyRitual.classList.add("is-arming");
-    setFeedback(rubyFeedback, "按住别松开，让藏起来的那句话慢慢发光。", "success");
+    setFeedback(rubyFeedback, "\u6309\u4f4f\u522b\u677e\u5f00\uff0c\u8ba9\u85cf\u8d77\u6765\u7684\u90a3\u53e5\u8bdd\u6162\u6162\u53d1\u5149\u3002", "success");
 
     const tick = (timestamp) => {
       const duration = 2800;
@@ -549,7 +598,7 @@ const setupSecretEgg = () => {
     rubyRitual.addEventListener(eventName, () => {
       if (!state.holdCompleted) {
         cancelRubyHold(true);
-        setFeedback(rubyFeedback, "差一点点，再按稳一点点，就能看见最后一句。");
+        setFeedback(rubyFeedback, "\u5dee\u4e00\u70b9\u70b9\uff0c\u518d\u6309\u7a33\u4e00\u70b9\u70b9\uff0c\u5c31\u80fd\u770b\u89c1\u6700\u540e\u4e00\u53e5\u3002");
       }
     });
   });
@@ -604,7 +653,7 @@ const setupMusicPlayer = (petalController) => {
   };
 
   const updateToggleButton = () => {
-    toggleButton.textContent = audio.paused ? "播放" : "暂停";
+    toggleButton.textContent = audio.paused ? "\u64ad\u653e" : "\u6682\u505c";
   };
 
   const pauseAllVideos = () => {
@@ -638,7 +687,7 @@ const setupMusicPlayer = (petalController) => {
 
     const retry = async () => {
       if (audio.paused) {
-        await playAudio("已经恢复背景音乐");
+        await playAudio("\u5df2\u7ecf\u6062\u590d\u80cc\u666f\u97f3\u4e50");
       }
 
       clearAutoplayFallback();
@@ -658,7 +707,7 @@ const setupMusicPlayer = (petalController) => {
       return true;
     } catch (error) {
       updateToggleButton();
-      setStatus("浏览器拦截了自动播放，点一下页面或播放按钮就能继续");
+      setStatus("\u6d4f\u89c8\u5668\u62e6\u622a\u4e86\u81ea\u52a8\u64ad\u653e\uff0c\u70b9\u4e00\u4e0b\u9875\u9762\u6216\u64ad\u653e\u6309\u94ae\u5c31\u80fd\u7ee7\u7eed");
       armAutoplayFallback(playAudio);
       return false;
     }
@@ -666,7 +715,7 @@ const setupMusicPlayer = (petalController) => {
 
   audio.volume = Number(volumeRange.value) / 100;
   loadTrack(0);
-  setStatus("进入页面后会尝试自动播放背景音乐");
+  setStatus("\u8fdb\u5165\u9875\u9762\u540e\u4f1a\u5c1d\u8bd5\u81ea\u52a8\u64ad\u653e\u80cc\u666f\u97f3\u4e50");
   updateToggleButton();
 
   audio.addEventListener("loadedmetadata", () => {
@@ -686,24 +735,24 @@ const setupMusicPlayer = (petalController) => {
     petalController.stop();
 
     if (audio.currentTime > 0 && audio.currentTime < (audio.duration || Infinity)) {
-      setStatus("背景音乐已暂停，花瓣特效也已关闭");
+      setStatus("\u80cc\u666f\u97f3\u4e50\u5df2\u6682\u505c\uff0c\u82b1\u74e3\u7279\u6548\u4e5f\u5df2\u5173\u95ed");
     }
   });
 
   audio.addEventListener("play", () => {
     updateToggleButton();
     petalController.start();
-    setStatus("正在播放背景音乐，花瓣特效已开启");
+    setStatus("\u6b63\u5728\u64ad\u653e\u80cc\u666f\u97f3\u4e50\uff0c\u82b1\u74e3\u7279\u6548\u5df2\u5f00\u542f");
   });
 
   audio.addEventListener("ended", async () => {
     loadTrack(currentTrackIndex + 1);
-    await playAudio("已切换到下一首背景音乐");
+    await playAudio("\u5df2\u5207\u6362\u5230\u4e0b\u4e00\u9996\u80cc\u666f\u97f3\u4e50");
   });
 
   toggleButton.addEventListener("click", async () => {
     if (audio.paused) {
-      await playAudio("正在播放背景音乐");
+      await playAudio("\u6b63\u5728\u64ad\u653e\u80cc\u666f\u97f3\u4e50");
     } else {
       audio.pause();
     }
@@ -714,9 +763,9 @@ const setupMusicPlayer = (petalController) => {
     loadTrack(currentTrackIndex + 1);
 
     if (shouldKeepPlaying) {
-      await playAudio("已切换到下一首背景音乐");
+      await playAudio("\u5df2\u5207\u6362\u5230\u4e0b\u4e00\u9996\u80cc\u666f\u97f3\u4e50");
     } else {
-      setStatus("已切换歌曲，点击播放就会重新出现花瓣");
+      setStatus("\u5df2\u5207\u6362\u6b4c\u66f2\uff0c\u70b9\u51fb\u64ad\u653e\u5c31\u4f1a\u91cd\u65b0\u51fa\u73b0\u82b1\u74e3");
     }
   });
 
@@ -733,7 +782,7 @@ const setupMusicPlayer = (petalController) => {
   });
 
   window.setTimeout(() => {
-    void playAudio("正在播放背景音乐");
+    void playAudio("\u6b63\u5728\u64ad\u653e\u80cc\u666f\u97f3\u4e50");
   }, 300);
 
   return {
@@ -816,16 +865,16 @@ const setupVideoMusicSync = (musicState) => {
   activeVideo.addEventListener("play", () => {
     if (!musicState.audio.paused) {
       musicState.audio.pause();
-      musicState.setStatus("视频开始播放，BGM 与花瓣特效已自动暂停");
+      musicState.setStatus("\u89c6\u9891\u5f00\u59cb\u64ad\u653e\uff0cBGM \u4e0e\u82b1\u74e3\u7279\u6548\u5df2\u81ea\u52a8\u6682\u505c");
     }
   });
 };
 
 renderPhotoWall();
-renderVideoShowcase();
+const videoShowcase = renderVideoShowcase();
 setupReveal();
 setupLetterTabs();
-setupSecretEgg();
+setupSecretEgg(videoShowcase);
 const petalController = setupPetals();
 const musicState = setupMusicPlayer(petalController);
 setupVideoMusicSync(musicState);

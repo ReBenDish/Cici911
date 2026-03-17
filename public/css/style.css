@@ -317,8 +317,8 @@ select {
 
 .music-player {
   position: fixed;
-  left: 20px;
-  bottom: 18px;
+  right: 20px;
+  bottom: 164px;
   z-index: 22;
   width: min(390px, calc(100vw - 40px));
   padding: 18px;
@@ -1532,8 +1532,8 @@ body.site-secret-awakened .secret-submit {
   }
 
   .music-player {
-    left: 12px;
-    bottom: 12px;
+    right: 12px;
+    bottom: 126px;
     width: min(420px, calc(100vw - 24px));
     padding: 16px;
   }
